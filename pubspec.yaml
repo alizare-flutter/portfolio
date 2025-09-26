@@ -1,0 +1,28 @@
+name: portfolio
+description: "this is my portfolio"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  dio: ^5.9.0
+  flutter:
+    sdk: flutter
+  font_awesome_flutter: ^10.10.0
+  google_fonts: ^6.3.1
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/fonts/Font Awesome 7 Brands-Regular-400.otf
+    - assets/fonts/Font Awesome 7 Free-Regular-400.otf
+    - assets/fonts/Font Awesome 7 Free-Solid-900.otf
