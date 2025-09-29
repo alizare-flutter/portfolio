@@ -25,7 +25,7 @@ class SkillsScreen extends StatelessWidget {
               children: [
                 Text(
                   "My Skills",
-                  style: GoogleFonts.montserrat(
+                  style: GoogleFonts.sora(
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
                     color: Colors.white
@@ -66,13 +66,13 @@ class SkillsScreen extends StatelessWidget {
             children: [
               Text(
                 "My Skills",
-                style: GoogleFonts.montserrat(
+                style: GoogleFonts.sora(
                   fontSize: 48,
                   fontWeight: FontWeight.w700,
                   color: Colors.white
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
               Center(
                 child: SizedBox(
                   width: MediaQuery.sizeOf(context).width * 0.75,
@@ -129,28 +129,57 @@ class _SkillContainerState extends State<SkillContainer> {
               color: isHover ? Colors.black : Colors.white, width: 2),
           borderRadius: BorderRadius.circular(6),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              widget.icon,
-              color: isHover ? Colors.black : Colors.white,
-              size: 40,
-            ),
-            const SizedBox(height: 16),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Text(
-                widget.title,
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            if (MediaQuery.sizeOf(context).width < 600) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    widget.icon,
+                    color: isHover ? Colors.black : Colors.white,
+                    size: 36,
+                  ),
+                  const SizedBox(height: 16),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                    child: Text(
+                      widget.title,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: isHover ? Colors.black : Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  )
+                ],
+              );
+            }
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  widget.icon,
                   color: isHover ? Colors.black : Colors.white,
+                  size: 40,
                 ),
-                textAlign: TextAlign.center,
-              ),
-            )
-          ],
+                const SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: Text(
+                    widget.title,
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: isHover ? Colors.black : Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                )
+              ],
+            );
+          },
         ),
       ),
     );

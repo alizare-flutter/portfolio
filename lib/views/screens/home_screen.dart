@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'about_me_screen.dart';
 import 'contact_me_screen.dart';
 import 'project_screen.dart';
@@ -47,10 +48,10 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Text(
                     "Ali Asghar Zare",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyLarge
-                        ?.copyWith(color: Theme.of(context).appBarTheme.foregroundColor),
+                    style: GoogleFonts.sora(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   AppBarMenu(
                     aboutKey: aboutKey,
@@ -135,7 +136,7 @@ class AppBarMenu extends StatelessWidget {
             children: [
               TextButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
+                  foregroundColor: Colors.black,
                 ),
                 onPressed: () {
                   Scrollable.ensureVisible(
@@ -148,7 +149,7 @@ class AppBarMenu extends StatelessWidget {
               ),
               TextButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
+                  foregroundColor: Colors.black,
                 ),
                 onPressed: () {
                   Scrollable.ensureVisible(
@@ -161,7 +162,7 @@ class AppBarMenu extends StatelessWidget {
               ),
               TextButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
+                  foregroundColor: Colors.black,
                 ),
                 onPressed: () {
                   Scrollable.ensureVisible(
@@ -174,7 +175,7 @@ class AppBarMenu extends StatelessWidget {
               ),
               TextButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
+                  foregroundColor: Colors.black,
                 ),
                 onPressed: () {
                   Scrollable.ensureVisible(
@@ -193,7 +194,7 @@ class AppBarMenu extends StatelessWidget {
           children: [
             TextButton(
               style: TextButton.styleFrom(
-                foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
+                foregroundColor: Colors.black,
               ),
               onPressed: () {
                 
@@ -202,7 +203,7 @@ class AppBarMenu extends StatelessWidget {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
+                foregroundColor: Colors.black,
               ),
               onPressed: () {
                 Scrollable.ensureVisible(
@@ -215,7 +216,7 @@ class AppBarMenu extends StatelessWidget {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
+                foregroundColor: Colors.black,
               ),
               onPressed: () {
                 Scrollable.ensureVisible(
@@ -228,7 +229,7 @@ class AppBarMenu extends StatelessWidget {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
+                foregroundColor: Colors.black,
               ),
               onPressed: () {
                 Scrollable.ensureVisible(

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AboutMeScreen extends StatelessWidget {
   const AboutMeScreen({super.key});
+  final String aboutMe = "Flutter Developer with experience in designing and implementing cross-platform applications (mobile, desktop, and web) and creating beautiful, user-friendly interfaces. Proficient in writing clean, scalable code and passionate about solving complex problems with creative and efficient solutions. Always eager to learn new technologies and contribute to challenging projects that deliver impactful user experiences.";
 
   @override
   Widget build(BuildContext context) {
@@ -14,24 +16,51 @@ class AboutMeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 16),
             child: Column(
               children: [
-                Image.asset(
-                  'assets/images/person_vector.png',
+                SvgPicture.asset(
+                  'assets/images/person_vector.svg',
                   height: 400,
                 ),
                 SizedBox(height: 30),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("About Me", style: GoogleFonts.montserrat(
-                      fontSize: 32,
-                      fontWeight: FontWeight.w700
-                    )),
+                    Text.rich(
+                      TextSpan(
+                        style: GoogleFonts.sora(
+                          fontSize: 28,
+                          letterSpacing: -0.02 * 28,
+                        ),
+                        children: [
+                          TextSpan(
+                            text: "Hello I’am ",
+                            style: GoogleFonts.sora(),
+                          ),
+                          TextSpan(
+                            text: "Ali Asghar Zare.\n",
+                            style: GoogleFonts.sora(
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          TextSpan(
+                            text: "Flutter ",
+                            style: GoogleFonts.sora(
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          TextSpan(
+                            text: "Developer.",
+                            style: GoogleFonts.sora(),
+                          ),
+                        ],
+                      ),
+                    ),
                     const SizedBox(height: 20),
                     Text(
-                      "Motivated and enthusiastic junior mobile developer with expertise in Flutter and solid experience using GetX for state management and Hive for local data storage. Skilled in building modern, responsive, and user-friendly mobile interfaces. Although I do not have formal work experience, I have completed multiple personal projects and hands-on practice in Flutter development. I am eager to contribute my skills to a dynamic team, gain professional experience, and grow as a developer.",
+                      aboutMe,
                       softWrap: true,
-                      style: GoogleFonts.inter(
-                        fontSize: 15,
+                      style: GoogleFonts.sora(
+                        fontSize: 16,
+                        color: Color(0xff71717A),
                       ),
                     ),
                   ],
@@ -48,25 +77,51 @@ class AboutMeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Flexible(
-                  child: Image.asset(
-                    'assets/images/person_vector.png',
+                  child: SvgPicture.asset(
+                    'assets/images/person_vector.svg',
                     height: 460,
-                  )
+                  ),
                 ),
                 Flexible(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("About Me", style: GoogleFonts.montserrat(
-                        fontSize: 48,
-                        fontWeight: FontWeight.w700
-                      )),
+                      Text.rich(
+                        TextSpan(
+                          style: GoogleFonts.sora(
+                            fontSize: 48,
+                            letterSpacing: -0.02 * 48,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: "Hello I’am ",
+                              style: GoogleFonts.sora(),
+                            ),
+                            TextSpan(
+                              text: "Ali Asghar Zare.\n",
+                              style: GoogleFonts.sora(
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                            TextSpan(
+                              text: "Flutter ",
+                              style: GoogleFonts.sora(
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                            TextSpan(
+                              text: "Developer.",
+                              style: GoogleFonts.sora(),
+                            ),
+                          ],
+                        ),
+                      ),
                       const SizedBox(height: 20),
                       Text(
-                        "Motivated and enthusiastic junior mobile developer with expertise in Flutter and solid experience using GetX for state management and Hive for local data storage. Skilled in building modern, responsive, and user-friendly mobile interfaces. Although I do not have formal work experience, I have completed multiple personal projects and hands-on practice in Flutter development. I am eager to contribute my skills to a dynamic team, gain professional experience, and grow as a developer.",
+                        aboutMe,
                         softWrap: true,
-                        style: GoogleFonts.inter(
-                          fontSize: 14,
+                        style: GoogleFonts.sora(
+                          fontSize: 16,
                           color: Color(0xff71717A)
                         ),
                       ),

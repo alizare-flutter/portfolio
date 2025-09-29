@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'text_from_field_widget.dart';
 
@@ -152,7 +153,9 @@ class _ContactFormState extends State<ContactForm> {
                     ),
                   ),
                   child: IconButton.filled(
-                    onPressed: (){}, 
+                    onPressed: () async{
+                      await launchUrl(Uri.parse("https://instagram.com/alizare.code"));
+                    }, 
                     style: IconButton.styleFrom(
                       backgroundColor: Colors.transparent
                     ),
@@ -173,7 +176,9 @@ class _ContactFormState extends State<ContactForm> {
                     ),
                   ),
                   child: IconButton.filled(
-                    onPressed: (){},
+                    onPressed: () async{
+                      await launchUrl(Uri.parse("https://t.me/alizzar"));
+                    },
                     style: IconButton.styleFrom(
                       backgroundColor: Colors.transparent
                     ),
@@ -193,7 +198,9 @@ class _ContactFormState extends State<ContactForm> {
                     ),
                   ),
                   child: IconButton.filled(
-                    onPressed: (){}, 
+                    onPressed: () async{
+                      await launchUrl(Uri.parse("https://www.linkedin.com/in/alizare-code"));
+                    }, 
                     style: IconButton.styleFrom(
                       backgroundColor: Colors.transparent
                     ),

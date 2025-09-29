@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -20,7 +21,7 @@ class ProjectScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 16),
             child: Column(
               children: [
-                Text("My Projects", style: GoogleFonts.montserrat(
+                Text("My Projects", style: GoogleFonts.sora(
                   fontSize: 28,
                   fontWeight: FontWeight.w700
                 )),
@@ -42,7 +43,7 @@ class ProjectScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 80),
             child: Column(
               children: [
-                Text("My Projects", style: GoogleFonts.montserrat(
+                Text("My Projects", style: GoogleFonts.sora(
                   fontSize: 48,
                   fontWeight: FontWeight.w700
                 )),
@@ -69,10 +70,9 @@ class ProjectScreen extends StatelessWidget {
 }
 
 class ProjectCard extends StatelessWidget {
-  const ProjectCard({super.key, required this.project, this.isReversed = false, this.isResponsive = false});
+  const ProjectCard({super.key, required this.project, this.isReversed = false});
   final Project project;
   final bool isReversed;
-  final bool isResponsive;
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +125,7 @@ class ProjectImage extends StatelessWidget {
         if (constraints.maxWidth < 600) {
           return ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: Image.asset(
+            child: SvgPicture.asset(
               image,
               fit: BoxFit.cover,
             ),
@@ -138,7 +138,7 @@ class ProjectImage extends StatelessWidget {
             aspectRatio: 16 / 12,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
+              child: SvgPicture.asset(
                 image,
                 fit: BoxFit.cover,
               ),
@@ -169,12 +169,12 @@ class ProjectInfo extends StatelessWidget {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: GoogleFonts.montserrat(
+              Text(title, style: GoogleFonts.sora(
                 fontSize: 20,
                 fontWeight: FontWeight.w700
               )),
               const SizedBox(height: 20),
-              Text(description, style: GoogleFonts.montserrat(
+              Text(description, style: GoogleFonts.sora(
                 fontSize: 14,
                 fontWeight: FontWeight.w400
               )),
@@ -190,11 +190,11 @@ class ProjectInfo extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: GoogleFonts.montserrat(
+            Text(title, style: GoogleFonts.sora(
               fontSize: 32,
               fontWeight: FontWeight.w600
             )),
-            Text(description, style: GoogleFonts.montserrat(
+            Text(description, style: GoogleFonts.sora(
               fontSize: 16,
               fontWeight: FontWeight.w400
             )),

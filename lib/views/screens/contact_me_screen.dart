@@ -20,7 +20,7 @@ class ContactMeScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 Text(
                   "Let's talk for Something Special",
-                  style: GoogleFonts.montserrat(
+                  style: GoogleFonts.sora(
                     fontSize: 24,
                     fontWeight: FontWeight.w700,
                     color: Colors.white
@@ -29,7 +29,7 @@ class ContactMeScreen extends StatelessWidget {
                 SizedBox(height: 32),
                 Text(
                   "I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.",
-                  style: GoogleFonts.montserrat(
+                  style: GoogleFonts.sora(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: Colors.white
@@ -102,7 +102,7 @@ class ContactMeScreen extends StatelessWidget {
                   children: [
                     Text(
                       "Let's talk for Something Special",
-                      style: GoogleFonts.montserrat(
+                      style: GoogleFonts.sora(
                         fontSize: 48,
                         fontWeight: FontWeight.w700,
                         color: Colors.white
@@ -111,7 +111,7 @@ class ContactMeScreen extends StatelessWidget {
                     SizedBox(height: 10),
                     Text(
                       "I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.",
-                      style: GoogleFonts.montserrat(
+                      style: GoogleFonts.sora(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
                         color: Colors.white
