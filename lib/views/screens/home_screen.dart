@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'about_me_screen.dart';
 import 'contact_me_screen.dart';
 import 'project_screen.dart';
@@ -60,9 +62,18 @@ class HomeScreen extends StatelessWidget {
                     contactKey: contactKey,
                   ),
                   ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      launchUrl(Uri.parse("https://drive.google.com/file/d/1BsjcP1TsFKCx0nISvzn9WH4a06CeEYyI/view?usp=sharing"));
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4)
+                      )
+                    ),
                     label: const Text("Resume"),
-                    icon: const Icon(Icons.file_download_outlined),
+                    icon: const Icon(FontAwesomeIcons.filePdf),
                   ),
                 ],
               );

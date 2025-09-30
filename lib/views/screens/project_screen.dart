@@ -9,8 +9,7 @@ import '../../models/project.dart';
 class ProjectScreen extends StatelessWidget {
   ProjectScreen({super.key});
   final List<Project> projects = [
-    Project(title: "Clinic App", description: "A comprehensive Flutter desktop application for clinic management, featuring patient records, appointment scheduling, financial tracking, and service management. Built with modern Flutter architecture using GetX for state management and Hive for local data storage.", image: "assets/images/clinic_app_cover.png", link: "https://github.com/alizare-flutter/clinic_app"),
-
+    Project(title: "Clinic App", description: "A comprehensive Flutter desktop application for clinic mafnagement, featuring patient records, appointment scheduling, financial tracking, and service management. Built with modern Flutter architecture using GetX for state management and Hive for local data storage.", image: "assets/images/clinic_app_cover.svg", link: "https://github.com/alizare-flutter/clinic_app"),
   ];
   @override
   Widget build(BuildContext context) {
