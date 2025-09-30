@@ -137,9 +137,16 @@ class ProjectImage extends StatelessWidget {
             aspectRatio: 16 / 12,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: SvgPicture.asset(
-                image,
-                fit: BoxFit.cover,
+              child: Stack(
+                alignment: AlignmentDirectional.center,
+                children: [
+                  const CircularProgressIndicator(),
+                  SvgPicture.asset(
+                    image,
+                    fit: BoxFit.cover,
+                    placeholderBuilder: (context) => const SizedBox.shrink(),
+                  ),
+                ],
               ),
             ),
           ),
